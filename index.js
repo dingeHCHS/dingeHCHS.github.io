@@ -16,6 +16,11 @@
 'use strict';
 
 (function() {
+  
+  // Add jaw here for global value
+  // https://groups.google.com/forum/#!topic/marzipano/Ta2qr4jcWRI
+  var myyaw = 0;    // added
+  
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
   var screenfull = window.screenfull;
@@ -185,6 +190,10 @@
   function switchScene(scene) {
     stopAutorotate();
     scene.view.setParameters(scene.data.initialViewParameters);
+    
+    // https://groups.google.com/forum/#!topic/marzipano/Ta2qr4jcWRI
+    scene.view._yaw = myyaw;    // added
+    
     scene.scene.switchTo();
     startAutorotate();
     updateSceneName(scene);
@@ -265,6 +274,10 @@
 
     // Add click event handler.
     wrapper.addEventListener('click', function() {
+      
+      // https://groups.google.com/forum/#!topic/marzipano/Ta2qr4jcWRI
+      myyaw = hotspot.yaw;      // added
+      
       switchScene(findSceneById(hotspot.target));
     });
 
