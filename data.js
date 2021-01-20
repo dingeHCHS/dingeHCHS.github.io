@@ -266,7 +266,7 @@ var APP_DATA = {
           "yaw": 0.9649977280053079,
           "pitch": -0.07794705682706038,
           "title": "AgIntro",
-          "text": "<iframe src="https://drive.google.com/file/d/1GZ2fkI-tfGB-TzMMzHbiQCcdvCyKWhZ1/preview" width="640" height="480"></iframe>"
+          "text": '<iframe src="https://drive.google.com/file/d/1GZ2fkI-tfGB-TzMMzHbiQCcdvCyKWhZ1/preview" width="640" height="480"></iframe>'
         }
       ]
     },
